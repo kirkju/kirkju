@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 220" width="720" height="220" role="img" aria-labelledby="t d">
+  <title id="t">Alejandro Vargas, Computer Systems Engineer</title>
+  <desc id="d">A chart draws a series of observations, then a forecast with its uncertainty bands, and finally the values observed afterwards.</desc>
+  <!--
+    A forecast, its 80% and 95% intervals, and what happened next.
+    One point lands outside the 80% band on purpose: calibrated uncertainty is supposed to miss sometimes.
+  -->
+  <style>
+    .sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif; }
+    .mono { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace; }
+    .rise  { animation: rise .7s cubic-bezier(.22,1,.36,1) both; }
+    .pop   { transform-box: fill-box; transform-origin: center; animation: pop .45s cubic-bezier(.34,1.56,.64,1) both; }
+    .draw  { stroke-dasharray: 1; animation: draw 1.2s cubic-bezier(.65,0,.35,1) both; }
+    .fade  { animation: fade .6s ease-out both; }
+    .unfold { transform-box: fill-box; transform-origin: 0 50%; animation: unfold 1.2s cubic-bezier(.65,0,.35,1) both; }
+    .ch    { animation: show .01s linear both; }
+    .caret { animation: caret 1.84s steps(41, start) 0.9s both, blink 1s steps(1, end) 2.74s 5 both, fadeout .4s ease-in 7.74s forwards; }
+    .pulse { transform-box: fill-box; transform-origin: center; animation: fade .4s ease-out 2.9s both, pulse 2.8s ease-out 3.3s infinite; }
+    .egg   { opacity: 0; animation: egg 9s ease-in-out 30s 1 both; }
+    @keyframes rise   { from { opacity: 0; transform: translateY(8px); } }
+    @keyframes pop    { from { opacity: 0; transform: scale(0); } }
+    @keyframes draw   { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
+    @keyframes fade   { from { opacity: 0; } }
+    @keyframes unfold { from { opacity: 0; transform: scaleX(0); } }
+    @keyframes show   { from { fill-opacity: 0; } }
+    @keyframes caret  { from { transform: translateX(0); } to { transform: translateX(344.4px); } }
+    @keyframes blink  { 0% { opacity: 1; } 50% { opacity: 0; } 100% { opacity: 1; } }
+    @keyframes fadeout { to { opacity: 0; } }
+    @keyframes pulse  { 0% { transform: scale(1); opacity: .55; } 70%, 100% { transform: scale(3.4); opacity: 0; } }
+    @keyframes egg    { 0%, 100% { opacity: 0; } 12%, 88% { opacity: 1; } }
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; }
+      .caret, .pulse { display: none; }
+    }
+  </style>
+  <defs>
+    <radialGradient id="glow" cx="78%" cy="45%" r="55%">
+      <stop offset="0" stop-color="rgb(34 211 238 / 0.10)"/>
+      <stop offset="1" stop-color="rgb(34 211 238 / 0.10)" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect x=".5" y=".5" width="719" height="219" rx="14" fill="#050b18" stroke="#1b2b47"/>
+  <rect x=".5" y=".5" width="719" height="219" rx="14" fill="url(#glow)"/>
+
+  <!-- Name and role -->
+  <text class="mono rise" x="44" y="78" font-size="11.5" letter-spacing="1.7" fill="#22d3ee" style="animation-delay:.05s">COMPUTER SYSTEMS ENGINEER</text>
+  <text class="sans rise" x="43" y="121" font-size="38" font-weight="600" letter-spacing="-.6" fill="#f3f6fb" style="animation-delay:.15s">Alejandro Vargas</text>
+  <text class="mono" y="155" font-size="14" fill="#93a4be"><tspan class="ch" x="44.0" style="animation-delay:0.900s">.</tspan><tspan class="ch" x="52.4" style="animation-delay:0.945s">N</tspan><tspan class="ch" x="60.8" style="animation-delay:0.990s">E</tspan><tspan class="ch" x="69.2" style="animation-delay:1.035s">T</tspan><tspan class="ch" x="86.0" style="animation-delay:1.125s">·</tspan><tspan class="ch" x="102.8" style="animation-delay:1.215s">R</tspan><tspan class="ch" x="111.2" style="animation-delay:1.260s">e</tspan><tspan class="ch" x="119.6" style="animation-delay:1.305s">a</tspan><tspan class="ch" x="128.0" style="animation-delay:1.350s">c</tspan><tspan class="ch" x="136.4" style="animation-delay:1.395s">t</tspan><tspan class="ch" x="153.2" style="animation-delay:1.485s">·</tspan><tspan class="ch" x="170.0" style="animation-delay:1.575s">R</tspan><tspan class="ch" x="178.4" style="animation-delay:1.620s">u</tspan><tspan class="ch" x="186.8" style="animation-delay:1.665s">s</tspan><tspan class="ch" x="195.2" style="animation-delay:1.710s">t</tspan><tspan class="ch" x="212.0" style="animation-delay:1.800s">·</tspan><tspan class="ch" x="228.8" style="animation-delay:1.890s">P</tspan><tspan class="ch" x="237.2" style="animation-delay:1.935s">y</tspan><tspan class="ch" x="245.6" style="animation-delay:1.980s">t</tspan><tspan class="ch" x="254.0" style="animation-delay:2.025s">h</tspan><tspan class="ch" x="262.4" style="animation-delay:2.070s">o</tspan><tspan class="ch" x="270.8" style="animation-delay:2.115s">n</tspan><tspan class="ch" x="287.6" style="animation-delay:2.205s">·</tspan><tspan class="ch" x="304.4" style="animation-delay:2.295s">a</tspan><tspan class="ch" x="312.8" style="animation-delay:2.340s">p</tspan><tspan class="ch" x="321.2" style="animation-delay:2.385s">p</tspan><tspan class="ch" x="329.6" style="animation-delay:2.430s">l</tspan><tspan class="ch" x="338.0" style="animation-delay:2.475s">i</tspan><tspan class="ch" x="346.4" style="animation-delay:2.520s">e</tspan><tspan class="ch" x="354.8" style="animation-delay:2.565s">d</tspan><tspan class="ch" x="371.6" style="animation-delay:2.655s">A</tspan><tspan class="ch" x="380.0" style="animation-delay:2.700s">I</tspan></text>
+  <rect class="caret" x="46" y="142.5" width="2" height="16" rx="1" fill="#22d3ee"/>
+  <text class="mono egg" x="44" y="194" font-size="10" fill="#93a4be">psst: there is a note in this README's source</text>
+
+  <!-- Chart: observations, forecast with 95% and 80% bands, and what was observed afterwards -->
+  <g class="fade" style="animation-delay:.25s" stroke="rgb(148 163 184 / 0.09)" stroke-width="1">
+    <path d="M432 52H676M432 92H676M432 132H676"/>
+    <path d="M432 172H676" stroke="rgb(148 163 184 / 0.22)"/>
+  </g>
+  <path class="draw" pathLength="1" style="animation-duration:.9s;animation-delay:.45s" fill="none" stroke="#93a4be" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round" d="M432 152L446.5 148L461 140L475.5 131L490 135L504.5 127L519 114L533.5 105L548 96"/>
+  <circle class="pop" style="animation-delay:0.45s" cx="432" cy="152" r="2.7" fill="#93a4be"/>
+  <circle class="pop" style="animation-delay:0.54s" cx="446.5" cy="148" r="2.7" fill="#93a4be"/>
+  <circle class="pop" style="animation-delay:0.63s" cx="461" cy="140" r="2.7" fill="#93a4be"/>
+  <circle class="pop" style="animation-delay:0.72s" cx="475.5" cy="131" r="2.7" fill="#93a4be"/>
+  <circle class="pop" style="animation-delay:0.81s" cx="490" cy="135" r="2.7" fill="#93a4be"/>
+  <circle class="pop" style="animation-delay:0.90s" cx="504.5" cy="127" r="2.7" fill="#93a4be"/>
+  <circle class="pop" style="animation-delay:0.99s" cx="519" cy="114" r="2.7" fill="#93a4be"/>
+  <circle class="pop" style="animation-delay:1.08s" cx="533.5" cy="105" r="2.7" fill="#93a4be"/>
+  <circle class="pop" style="animation-delay:1.17s" cx="548" cy="96" r="2.7" fill="#93a4be"/>
+  <path class="fade" style="animation-delay:1.3s" d="M548 46V172" stroke="rgb(148 163 184 / 0.22)" stroke-width="1" stroke-dasharray="3 4"/>
+  <path class="unfold" style="animation-delay:1.5s" fill="#22d3ee" fill-opacity=".10" d="M548 96C568 68 588 46 608 43C632 40 656 46 676 53V141C656 126 632 108 608 98C588 90 568 94 548 96Z"/>
+  <path class="unfold" style="animation-delay:1.5s" fill="#22d3ee" fill-opacity=".17" d="M548 96C568 76 588 57 608 55C632 53 656 60 676 68V118C656 106 632 92 608 86C588 82 568 90 548 96Z"/>
+  <path class="draw" pathLength="1" style="animation-delay:1.5s" fill="none" stroke="#22d3ee" stroke-width="2" stroke-linecap="round" d="M548 96C566 83 586 70 606 70C630 70 654 80 676 92"/>
+  <circle class="pulse" cx="676" cy="92" r="3" fill="#22d3ee"/>
+  <circle class="pop" style="animation-delay:2.7s" cx="676" cy="92" r="3" fill="#22d3ee"/>
+  <circle class="pop" style="animation-delay:3.40s" cx="576" cy="85" r="3" fill="#050b18" stroke="#f3f6fb" stroke-width="1.5"/>
+  <circle class="pop" style="animation-delay:3.85s" cx="604" cy="74" r="3" fill="#050b18" stroke="#f3f6fb" stroke-width="1.5"/>
+  <circle class="pop" style="animation-delay:4.30s" cx="632" cy="86" r="3" fill="#050b18" stroke="#f3f6fb" stroke-width="1.5"/>
+  <circle class="pop" style="animation-delay:4.75s" cx="660" cy="121" r="3" fill="#050b18" stroke="#f3f6fb" stroke-width="1.5"/>
+</svg>
